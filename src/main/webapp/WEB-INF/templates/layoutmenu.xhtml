@@ -7,13 +7,15 @@
 	<h:form id="formMenu">
 		<p:growl id="messages" showDetail="false" />
 		<p:menu toggleable="true" style="font-size: 14px;">
-			<p:submenu label="Introdução">
+			<p:submenu label="Introdução" style="background-color: #99ccff;">
 				<p:menuitem value="Objetivo/Escopo"
 					outcome="formObjEscopo"
 					icon="fa fa-fw fa-file-text-o" />
-				<p:menuitem value="Referências" actionListener="#{menuView.save}"
-					update="messages" icon="fa fa-fw fa-bookmark" />
+				<p:menuitem value="Referências"
+					outcome="referencias"
+					icon="fa fa-fw fa-bookmark" />
 				<p:menuitem value="Definições e Siglas"
+					outcome="def_e_siglas"
 					actionListener="#{menuView.save}" update="messages"
 					icon="fa fa-fw fa-file-text" />
 			</p:submenu>
@@ -21,18 +23,24 @@
 
 		<p:menu style="font-size: 14px;">
 			<p:menuitem value="Atores e sist. externos"
+				outcome="atores_e_sist_internos"
 				actionListener="#{menuView.delete}" update="messages" ajax="false"
 				icon="fa fa-fw fa-user" />
 			<p:menuitem value="Interfaces de usuário"
+				outcome="interfaces_de_usuario"
 				actionListener="#{menuView.delete}" update="messages" ajax="false"
 				icon="fa fa-fw fa-image" />
 			<p:menuitem value="Req. armazenamento"
+				outcome="req_de_armazenamento"
 				actionListener="#{menuView.delete}" update="messages" ajax="false"
 				icon="fa fa-fw fa-archive" />
 			<p:menuitem value="Funções do Produto"
+				outcome="func_de_produtos"
 				actionListener="#{menuView.delete}" update="messages" ajax="false"
 				icon="fa fa-fw fa-gears" />
-			<p:menuitem value="Casos de Uso" actionListener="#{menuView.delete}"
+			<p:menuitem value="Casos de Uso" 
+				outcome="casos_de_uso"
+				actionListener="#{menuView.delete}"
 				update="messages" ajax="false" icon="fa fa-fw fa-sitemap" />
 		</p:menu>
 	</h:form>

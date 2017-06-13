@@ -6,10 +6,10 @@
 
 	<!-- TOPO START -->
 	<ui:define name="corpo">
-		<title>Objetivo/Escopo</title>
+		<title>Referências</title>
 		<h:form>
 		<div style="border: 2px solid black; text-align: center; border-radius: 2px; background-color: #99ccff;">
-				Objetivo e Escopo</div>
+				Referências</div>
 			<br />
 			<p:megaMenu
 				style="width: 400px; 
@@ -24,19 +24,24 @@
 			</p:megaMenu>
 			<br />
 			<br />
-			<p:outputLabel for="inputObjetivo" value="Objetivo" />
+			<p:dataTable var="car" value="#{dtBasicView.cars}">
+				<p:column headerText="Descrição">
+					<h:outputText value="#{fileUploadView.file}" />
+				</p:column>
+
+				<p:column headerText="Nome do arquivo">
+					<h:outputText value="#{car.year}" />
+				</p:column>
+			</p:dataTable>
+			<br/>
+			<br/>
+			<p:outputLabel for="inputDesc" value="Descrição" />
 			<br />
-			<p:inputTextarea id="inputObjetivo" style="width: 90%; background-color: #e6f7ff;" />
-			<br />
-			<br />
-			<p:outputLabel for="inputEscopo" value="Escopo" />
-			<br />
-			<p:inputTextarea id="inputEscopo" style="width: 90%; background-color: #e6f7ff;" />
-			<br />
-			<br />
-			<p:outputLabel for="inputVisaoGeral" value="Visão Geral" />
-			<br />
-			<p:inputTextarea id="inputVisaoGeral" style="width: 90%; background-color: #e6f7ff;" />
+			<p:inputText id="inputDesc" style="width: 30%; background-color: #e6f7ff;" />
+			<br/>
+			<br/>
+			<p:fileUpload value="#{fileUploadView.file}" mode="simple" skinSimple="true" update="@form"/>
+			
 		</h:form>
 	</ui:define>
 	<!-- TOPO END -->
