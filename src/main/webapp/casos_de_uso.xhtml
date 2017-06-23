@@ -8,7 +8,15 @@
 	<ui:define name="corpo">
 		<title>Casos de Uso</title>
 		<h:form>
-			<div style="border: 2px solid black; text-align: center; border-radius: 2px; background-color: #99ccff;">
+			<p:dialog header="Informações" widgetVar="infoProj" width="50%" height="auto" minHeight="40" dynamic="true" maximizable="true">
+	    		<h:outputText value="O Gerador de documento de requisitos é uma ferramenta desenvolvida no mestrado do Hélcio
+	    		de Abreu Soares pela Universidade Federal do Piauí. O seu trabalho foi propor uma metodologia para auxliar a 
+	    		escrita de documentos de requisitos completos, consistentes e não ambíguos, denominada HELP4ERS.
+	    		No momento esta fazendo parte dos projetos do Estágio Supervisionado do NTI.
+	    		O objetivo desse estagio é fazer as melhorias e migração da ferramenta em desktop para plataforma Web." />
+			</p:dialog>
+			<div
+				style="border: 2px solid black; text-align: center; border-radius: 2px; background-color: #99ccff;">
 				Casos de Uso</div>
 			<br />
 			<p:megaMenu
@@ -32,22 +40,31 @@
 				<p:column headerText="Ator">
 					<h:outputText value="#{car.year}" />
 				</p:column>
-				
+
 				<p:column headerText="Proposito">
 					<h:outputText value="#{car.year}" />
 				</p:column>
 			</p:dataTable>
-			<br/>
-			<br/>
-			<p:outputLabel for="inputNome" value="Nome" />
 			<br />
-			<p:inputText id="inputNome" style="width: 30%; background-color: #e6f7ff;" />
-			<br/>
-			<br/>
-			<p:outputLabel for="inputAtorP" value="Ator Principal" />
 			<br />
-			<p:inputText id="inputAtorP" style="width: 30%; background-color: #e6f7ff;" />
-			
+
+			<p:panelGrid columns="2" layout="grid">
+				<p:outputLabel for="inputNome" value="Nome" />
+				<p:outputLabel for="inputAtorP" value="Ator Principal" />
+				<p:inputText id="inputNome"
+					style="width: 90%;  background-color: #e6f7ff;" />
+				<p:inputText id="inputAtorP"
+					style="width: 90%; background-color: #e6f7ff;" />
+				<p:outputLabel for="inputProposito" value="Propósito"/>
+				<p:outputLabel for="inputDesc" value="Descrição"/>
+				<p:inputTextarea id="inputProposito" style="width: 90%; background-color: #e6f7ff;" />	
+				<p:inputTextarea id="inputDesc" style="width: 90%; background-color: #e6f7ff;" />	
+				<p:outputLabel for="inputPreCond" value="Pré-condição"/>
+				<p:outputLabel for="inputPosCond" value="Pós-condição"/>
+				<p:inputTextarea id="inputPreCond" style="width: 90%; background-color: #e6f7ff;" />	
+				<p:inputTextarea id="inputPosCond" style="width: 90%; background-color: #e6f7ff;" />	
+					
+			</p:panelGrid>
 		</h:form>
 	</ui:define>
 	<!-- TOPO END -->

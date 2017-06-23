@@ -6,9 +6,14 @@
 
 
 	<!-- FOOTER  -->
-	<f:facet name="footer">
-        In total there are #{fn:length(dtBasicView.cars)} cars.
-    </f:facet>
-	<a href="https://github.com/afabricioa/SRSEditor-WEB">GitHub</a>
+	<h:form>
+		<p:megaMenu>
+			<p:menuitem style="color: white;" url="https://github.com/afabricioa/SRSEditor-WEB"
+				icon="fa fa-fw fa-github" />
+				<p:menuitem style="color: white;" url="https://github.com/wellingtonCoimbra/GeradorDocumentos"
+				icon="fa fa-fw fa-github-alt" />
+			<p:menuitem style="color: white;" value="Departamento de Computação 2017.1" />
+		</p:megaMenu>
+	</h:form>
 	
 </ui:composition>

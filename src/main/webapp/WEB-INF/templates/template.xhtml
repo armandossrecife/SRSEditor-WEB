@@ -37,6 +37,12 @@
 		
 		.ui-layout-pane-center{
 			border: 2 ! important;
+			overflow: scroll ! important;
+		}
+		
+		.ui-layout-pane-south{
+			border: 0;
+			overflow: hidden ! important;
 		}
 		
 		.ui-megamenu {
@@ -68,9 +74,9 @@
 			<ui:insert name="corpo" />
 		</p:layoutUnit>
 		
-<!-- 		<p:layoutUnit position="south"> -->
-<!-- 			<ui:insert name="footer"/> -->
-<!-- 		</p:layoutUnit> -->
+		<p:layoutUnit position="south">
+			<ui:include src="footer.xhtml"/>
+		</p:layoutUnit>
 
 	</p:layout>
 </h:body>
