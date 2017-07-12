@@ -7,13 +7,13 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="usuario")
-@NamedQueries({
-	@NamedQuery(name="Usuario.control", query="SELECT u FROM Usuario u WHERE u.username = :username and u.password = :password")
-//	@NamedQuery(name="Usuario.findAll", query="SELECT u FROM Usuario u"),
-//	@NamedQuery(name="Usuario.findById", query="SELECT u FROM Usuario u WHERE u.userid= :id"),
-//	@NamedQuery(name="Usuario.findByUsername", query="SELECT u FROM Usuario u WHERE u.username= :username"),
-//	@NamedQuery(name="Usuario.findByPassword", query="SELECT u FROM Usuario u WHERE u.password= :password")
-})
+//@NamedQueries({
+//	@NamedQuery(name="Usuario.control", query="SELECT u FROM Usuario u WHERE u.username = :username and u.password = :password")
+////	@NamedQuery(name="Usuario.findAll", query="SELECT u FROM Usuario u"),
+////	@NamedQuery(name="Usuario.findById", query="SELECT u FROM Usuario u WHERE u.userid= :id"),
+////	@NamedQuery(name="Usuario.findByUsername", query="SELECT u FROM Usuario u WHERE u.username= :username"),
+////	@NamedQuery(name="Usuario.findByPassword", query="SELECT u FROM Usuario u WHERE u.password= :password")
+//})
 
 @ManagedBean
 public class Usuario implements Serializable{

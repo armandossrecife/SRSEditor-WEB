@@ -21,11 +21,11 @@ public class UsuarioDAO {
 	
 	public boolean loginControl(String username, String password){
 		EntityManager em = JPAUtil.getEntityManager();
-		//TypedQuery<Usuario> query = em.createQuery("SELECT u FROM Usuario u WHERE u.username = "+username+" and u.pwd= "+password, Usuario.class);
+		TypedQuery<Usuario> query = em.createQuery("SELECT u FROM Usuario u WHERE u.username = :username AND u.pwd = :password", Usuario.class);
+		query.setParameter("username", username).setParameter("password", password);
 		try{
-			Usuario u = (Usuario) em.createNamedQuery("Usuario.control", Usuario.class).setParameter("username", username).setParameter("password", password);
-			System.out.println("nome e senha " + u.getUsername() + u.getPwd());
-	
+			Usuario u = query.getSingleResult();
+			
 			if(u != null){
 				return true;
 			}
