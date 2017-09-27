@@ -10,7 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
 	
-	  <listener>
+	  <!--<listener>
 		<listener-class>
 			org.springframework.web.context.request.RequestContextListener
 		</listener-class>
@@ -33,7 +33,7 @@
 	<servlet-mapping>
     	<servlet-name>SpringMVCServlet</servlet-name>
       	<url-pattern>/</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping>   -->
 
 		<!-- jsf2 -->
 		<context-param>
