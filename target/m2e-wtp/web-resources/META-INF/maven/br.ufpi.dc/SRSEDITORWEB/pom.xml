@@ -28,14 +28,14 @@
 		<!-- The version of log4j library -->
 		<log4j>2.6.2</log4j>
 
-		<!-- The version of spring security library 
+		<!-- The version of spring security library -->
 		<spring.security>4.0.4.RELEASE</spring.security>
 
 		<spring.web>4.2.8.RELEASE</spring.web>
 
 		<spring.el>3.0.0</spring.el>
 
-		<spring-data-jpa.v>1.11.3.RELEASE</spring-data-jpa.v> -->
+		<spring-data-jpa.v>1.11.3.RELEASE</spring-data-jpa.v>
 
 		<junit>4.11</junit>
 
@@ -90,36 +90,7 @@
 			<artifactId>primefaces</artifactId>
 			<version>6.0</version>
 		</dependency>
-		
-		<!-- 
-
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<version>${spring-data-jpa.v}</version>
-		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${spring.web}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.web}</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${spring.web}</version>
-		</dependency>
-		 -->
+	
 
 		<dependency>
 			<groupId>javax.faces</groupId>

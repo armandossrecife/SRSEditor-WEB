@@ -5,7 +5,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
-<!-- 	template="/WEB-INF/templates/template.xhtml"> -->
+
 
 <h:head>
 	<f:facet name="first">
@@ -22,9 +22,7 @@
  			border: 0px none; 
 			overflow: hidden !important; 
  		} 
-/* 		.ui-layout-pane { */
-/*     		border: 0; */
-/* 		} */
+
 		.ui-layout-pane-north{
 			border: 0;
 			overflow: hidden !important;
@@ -55,26 +53,13 @@
 	</style>
 <h:body>
 	<title>Home</title>	
-	<!-- 	<ui:composition> -->
-	<!-- 		<ui:define name="corpo"> -->
-	<!-- 			<title>Home</title> -->
-	<!-- 			<h:form id="form"> -->
-	<!-- 				<ui:insert name="corpo"> -->
-	<!-- 				</ui:insert> -->
-	<!-- 			</h:form> -->
-	<!-- 		</ui:define> -->
-
-	<!-- 	</ui:composition> -->
+	
 	<p:layout fullPage="true">
 
 		<p:layoutUnit position="north" size="50">
 			<ui:include src="WEB-INF/templates/topo.xhtml" />
 		</p:layoutUnit>
 
-
-		<!-- 		<p:layoutUnit position="south"> -->
-		<!-- 			<ui:include src="footer.xhtml" /> -->
-		<!-- 		</p:layoutUnit> -->
 
 
 		<p:layoutUnit position="west" style="font-size: 20px;  width: 95%;">
