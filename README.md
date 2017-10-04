@@ -25,10 +25,15 @@ Para rodar a aplicação:
 Referências:
 
 [1] JSF -  Java Server Faces - http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.html
+
 [2] PrimaFaces - framework para Java EE - https://www.primefaces.org
+
 [3] JPA - Java Persistence API - http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html
+
 [4] Maven - Gestão de Builds e Dependências - https://maven.apache.org
+
 [5] Tom Cat - Container Java Web - https://tomcat.apache.org/
+
 [6] Mysql 5 - Sistema de Gerenciamento de Banco de Dados - https://dev.mysql.com/downloads/mysql/
 
 Dúvidas, sugestões ou críticas entre em contato via e-mail lucasbrito_9@hotmail.com
