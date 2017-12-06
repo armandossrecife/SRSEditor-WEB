@@ -1,5 +1,8 @@
 package br.ufpi.dc.controle;
 
+/*
+ * PRECISA SER FEITO UM NOVO CONTROLER DE LOGIN
+ * 
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -57,4 +60,4 @@ public class LoginController {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-}
+}*/

@@ -1,5 +1,5 @@
-*target*
-.setting/
-.classpath
+/target/
 .project
-teste.txt
+.classpath
+.settings/
+
