@@ -84,7 +84,47 @@
 			<version>6.0</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
+		<dependency>
+		    <groupId>org.antlr</groupId>
+		    <artifactId>antlr4-runtime</artifactId>
+		    <version>4.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.fracpete/ptstemmer -->
+		<dependency>
+		    <groupId>com.github.fracpete</groupId>
+		    <artifactId>ptstemmer</artifactId>
+		    <version>2010.1.13</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+		<dependency>
+		    <groupId>org.apache.pdfbox</groupId>
+		    <artifactId>pdfbox</artifactId>
+		    <version>1.8.2</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.0-FINAL</version>
+		</dependency>
+						
+		<!-- https://mvnrepository.com/artifact/org.annolab.tt4j/org.annolab.tt4j -->
+		<dependency>
+		    <groupId>org.annolab.tt4j</groupId>
+		    <artifactId>org.annolab.tt4j</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.antlr/antlrworks -->
+		<dependency>
+		    <groupId>org.antlr</groupId>
+		    <artifactId>antlrworks</artifactId>
+		    <version>1.5.2</version>
+		</dependency>
+				
+										
 	
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
@@ -159,6 +199,7 @@
 			<version>5.0.0.Beta1</version>
 		</dependency>
 	</dependencies>
+		
 	
 	<build>
 		<finalName>${project.artifactId}</finalName>
@@ -171,7 +212,21 @@
 					<target>${maven.compiler.java.target}</target>
 				</configuration>
 			</plugin>
-		</plugins>
+			<plugin>
+	        <groupId>org.antlr</groupId>
+	        <artifactId>antlr4-maven-plugin</artifactId>
+	        <version>4.3</version>
+	        <executions>
+	          <execution>
+	            <id>antlr</id>
+	            <goals>
+	              <goal>antlr4</goal>
+	            </goals>
+	          </execution>
+	        </executions>
+	      </plugin>
+		</plugins>	
+		
 	</build>
 	
 </project>
