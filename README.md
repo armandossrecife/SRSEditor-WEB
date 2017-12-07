@@ -16,11 +16,10 @@ Para rodar a aplicação:
     2. Configure o projeto como MAVEN
     3. Atualize as dependências via Maven Update Project.
     4. Configure o container Java para rodar no Tom Cat[6].
-    5. Crei um banco mysql[7] com o nome srseditorweb
-    6. Crie a tabela usuario com os campos userid, username e pwd.
-    7. Cadastre pelo menos um usuário na tabela usuario.
-    8. No arquivo persistence.xml altere o user e o password do banco de dados.
-    9. Atualize seu JDk para o 1.8
+    5. Crei um banco mysql[7] com o nome srs
+    6. Crie um usuário para acessar o banco de dados. OBS: o nome do usuário deve ser editor.
+    7. De privilegio para esse usuário sobre o banco srs.
+    8. Atualize seu JDk para o 1.8
 
 Referências:
 
