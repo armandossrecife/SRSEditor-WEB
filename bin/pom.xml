@@ -1,0 +1,232 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.ufpi.dc</groupId>
+  <artifactId>SRSEDITORWEB</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>SRS Editor Web</name>
+  <description>Gerador de Documento de Requisitos WEB</description>
+  
+  <properties>
+		<!-- Explicitly declaring the source encoding eliminates the following 
+			message: [WARNING] Using platform encoding (UTF-8 actually) to copy filtered 
+			resources, i.e. build is platform dependent! -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- The version of primefaces -->
+		<primefaces>6.0</primefaces>
+
+		<!-- The version of jsf -->
+		<jsf>2.2.13</jsf>
+
+		<!-- The version of faces library -->
+		<javax.faces-api>2.2</javax.faces-api>
+
+		<!-- The version of servlet api -->
+		<javax.servlet.api>3.1.0</javax.servlet.api>
+
+		<!-- The version of log4j library -->
+		<log4j>2.6.2</log4j>
+
+		<!-- The version of spring security library -->
+		
+		<junit>4.11</junit>
+
+		<javax.validator>1.1.0.Final</javax.validator>
+
+		<commons-log>1.1.3</commons-log>
+
+		<commons-io>2.4</commons-io>
+
+		<commons-fileupload>1.3.1</commons-fileupload>
+
+		<jsr250>1.0</jsr250>
+
+		<cdi>1.2</cdi>
+
+		<javax-el>3.0.0</javax-el>
+
+		<jstl>1.2</jstl>
+
+		<c3p0>0.9.1.2</c3p0>
+
+		<!-- The version of source java -->
+		<maven.compiler.java.source>1.8</maven.compiler.java.source>
+
+		<!-- The version of target java -->
+		<maven.compiler.java.target>1.8</maven.compiler.java.target>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>oss.sonatype.org</id>
+			<name>OSS Sonatype Staging</name>
+			<url>https://oss.sonatype.org/content/groups/staging</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>2.5.0-RC1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.eclipse.persistence</groupId>
+					<artifactId>commonj.sdo</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
+		<dependency>
+		    <groupId>org.antlr</groupId>
+		    <artifactId>antlr4-runtime</artifactId>
+		    <version>4.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.fracpete/ptstemmer -->
+		<dependency>
+		    <groupId>com.github.fracpete</groupId>
+		    <artifactId>ptstemmer</artifactId>
+		    <version>2010.1.13</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+		<dependency>
+		    <groupId>org.apache.pdfbox</groupId>
+		    <artifactId>pdfbox</artifactId>
+		    <version>1.8.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.0-FINAL</version>
+		</dependency>
+						
+		<!-- https://mvnrepository.com/artifact/org.annolab.tt4j/org.annolab.tt4j -->
+		<dependency>
+		    <groupId>org.annolab.tt4j</groupId>
+		    <artifactId>org.annolab.tt4j</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.antlr/antlrworks -->
+		<dependency>
+		    <groupId>org.antlr</groupId>
+		    <artifactId>antlrworks</artifactId>
+		    <version>1.5.2</version>
+		</dependency>
+				
+										
+	
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.41</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+    		<groupId>commons-logging</groupId>
+    		<artifactId>commons-logging</artifactId>
+    		<version>1.1.1</version>
+		</dependency>
+		
+		<dependency>  
+    		<groupId>org.primefaces.extensions</groupId>  
+    		<artifactId>all-themes</artifactId>   
+    		<version>1.0.8</version>  
+		</dependency>  	
+
+		<dependency>
+			<groupId>javax.faces</groupId>
+			<artifactId>javax.faces-api</artifactId>
+			<version>${javax.faces-api}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet.api}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl}</version>
+		</dependency>
+
+		<!-- JSF -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>${jsf}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>${jsf}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.3.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.common</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>5.0.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.0.0.Beta1</version>
+		</dependency>
+	</dependencies>
+		
+	
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${maven.compiler.java.source}</source>
+					<target>${maven.compiler.java.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+	        <groupId>org.antlr</groupId>
+	        <artifactId>antlr4-maven-plugin</artifactId>
+	        <version>4.3</version>
+	        <executions>
+	          <execution>
+	            <id>antlr</id>
+	            <goals>
+	              <goal>antlr4</goal>
+	            </goals>
+	          </execution>
+	        </executions>
+	      </plugin>
+		</plugins>	
+		
+	</build>
+	
+</project>

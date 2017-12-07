@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<body>
+	<ui:composition>
+		<!-- TOPO START -->
+		<h:form>
+			<p:megaMenu>
+				<p:menuitem style="color: white;" url="http://www.primefaces.org"
+					icon="fa fa-fw fa-folder-open" value="Projetos" />
+				<p:menuitem style="color: white;" url="http://www.primefaces.org"
+					icon="fa fa-fw fa-book" value="Léxico" />
+				<p:menuitem style="color: white;" url="http://www.primefaces.org"
+					icon="fa fa-fw fa-print" value="Imprimir" />
+				<p:menuitem style="color: white;" icon="fa fa-fw fa-info-circle"
+					value="Info" onclick="PF('infoProj').show();" />
+			</p:megaMenu>
+		</h:form>
+		<!-- TOPO END -->
+
+	</ui:composition>
+</body>
+</html>

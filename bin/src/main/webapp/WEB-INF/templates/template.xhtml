@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:facet name="first">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</f:facet>
+</h:head>
+	<style>
+		.ui-layout-unit:not(#mainLU) .ui-layout-unit-content { 
+ 			padding: 0em 0em; 
+ 			border: 0px none; 
+			overflow: hidden !important; 
+ 		} 
+/* 		.ui-layout-pane { */
+/*     		border: 0; */
+/* 		} */
+		.ui-layout-pane-north{
+			border: 0;
+			overflow: hidden !important;
+			height: 70px;
+		}
+		
+		.ui-layout-pane-west{
+			border: 0;
+			overflow: hidden ! important;
+		}
+		
+		.ui-layout-pane-center{
+			border: 2 ! important;
+			overflow: scroll ! important;
+		}
+		
+		.ui-layout-pane-south{
+			border: 0;
+			overflow: hidden ! important;
+		}
+		
+		.ui-megamenu {
+			padding: 0.1em 0em;
+			background-color: black;
+			padding-left: 10px;
+		}
+        
+	</style>
+<h:body>
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="50">
+			<ui:include src="topo.xhtml" />
+		</p:layoutUnit>
+
+
+		<!-- 		<p:layoutUnit position="south"> -->
+		<!-- 			<ui:include src="footer.xhtml" /> -->
+		<!-- 		</p:layoutUnit> -->
+
+
+		<p:layoutUnit position="west" style="font-size: 20px;  width: 95%;">
+			<ui:include src="layoutmenu.xhtml" />
+		</p:layoutUnit>
+
+
+		<p:layoutUnit position="center" resizable="true">
+			<ui:insert name="corpo" />
+		</p:layoutUnit>
+		
+		<p:layoutUnit position="south">
+			<ui:include src="footer.xhtml"/>
+		</p:layoutUnit>
+
+	</p:layout>
+</h:body>
+
+</html>

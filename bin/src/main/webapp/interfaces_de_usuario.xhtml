@@ -1,0 +1,58 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/template.xhtml">
+
+	<!-- TOPO START -->
+	<ui:define name="corpo">
+		<title>Interfaces de Usuário</title>
+		<h:form>
+			<p:dialog header="Informações" widgetVar="infoProj" width="50%" height="auto" minHeight="40" dynamic="true" maximizable="true">
+	    		<h:outputText value="O Gerador de documento de requisitos é uma ferramenta desenvolvida no mestrado do Hélcio
+	    		de Abreu Soares pela Universidade Federal do Piauí. O seu trabalho foi propor uma metodologia para auxliar a 
+	    		escrita de documentos de requisitos completos, consistentes e não ambíguos, denominada HELP4ERS.
+	    		No momento esta fazendo parte dos projetos do Estágio Supervisionado do NTI.
+	    		O objetivo desse estagio é fazer as melhorias e migração da ferramenta em desktop para plataforma Web." />
+			</p:dialog>
+			<div style="border: 2px solid black; text-align: center; border-radius: 2px; background-color: #99ccff;">
+				Interfaces de Usuário</div>
+			<br />
+			<p:megaMenu
+				style="width: 400px; 
+				padding-left: 10px; background-color: #f2f2f2;">
+
+				<p:menuitem url="http://www.primefaces.org" icon="fa fa-fw fa-plus" />
+				<p:menuitem url="http://www.primefaces.org" icon="fa fa-fw fa-minus" />
+				<p:menuitem url="http://www.primefaces.org" icon="fa fa-fw fa-save" />
+				<p:menuitem url="http://www.primefaces.org" icon="fa fa-fw fa-check" />
+				<p:menuitem url="http://www.primefaces.org"
+					icon="fa fa-fw fa-pencil" />
+			</p:megaMenu>
+			<br />
+			<br />
+			<p:dataTable var="car" value="#{dtBasicView.cars}">
+				<p:column headerText="Nome">
+					<h:outputText value="#{fileUploadView.file}" />
+				</p:column>
+
+				<p:column headerText="Descrição">
+					<h:outputText value="#{car.year}" />
+				</p:column>
+			</p:dataTable>
+			<br/>
+			<br/>
+			<p:outputLabel for="inputNome" value="Nome" />
+			<br />
+			<p:inputText id="inputNome" style="width: 30%; background-color: #e6f7ff;" />
+			<br/>
+			<br/>
+			<p:outputLabel for="inputDesc" value="Descrição" />
+			<br />
+			<p:inputText id="inputDesc" style="width: 30%; background-color: #e6f7ff;" />
+			
+		</h:form>
+	</ui:define>
+	<!-- TOPO END -->
+
+</ui:composition>
