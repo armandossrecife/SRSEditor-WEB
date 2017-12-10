@@ -1,27 +1,23 @@
 package br.ufpi.dc.controle;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.annotation.PostConstruct;
+/*
+ * PRECISA SER FEITO UM NOVO CONTROLER DE LOGIN
+ * 
 import javax.enterprise.context.RequestScoped;
-import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
 import org.primefaces.context.RequestContext;
-import org.primefaces.event.RowEditEvent;
-
 import br.ufpi.dc.dao.UsuarioDAO;
-import br.ufpi.dc.modelo.Usuario;
 import br.ufpi.dc.utilidades.SessionUtil;
 
 @ManagedBean(name="login")
 @RequestScoped
 public class LoginController {
 	
-	private static final long serialVersionUID = 1L;
+//	@SuppressWarnings("unused")
+//	private static final long serialVersionUID = 1L;
 	
 	private String username;
 	private String password;
@@ -32,7 +28,7 @@ public class LoginController {
 	public String loginControl(){
 		System.out.println("autenticando...");
 		if(usuarioDAO.loginControl(username, password)){
-//		if (usuario.getUsername().equals("admin")&&usuario.getPwd().equals("admin")) {
+
 			Object b = new Object();
 			SessionUtil.setParam("UsuarioLogado", b);
 			
@@ -64,4 +60,4 @@ public class LoginController {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-}
+}*/

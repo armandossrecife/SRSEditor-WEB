@@ -29,14 +29,7 @@
 		<log4j>2.6.2</log4j>
 
 		<!-- The version of spring security library -->
-		<spring.security>4.0.4.RELEASE</spring.security>
-
-		<spring.web>4.2.8.RELEASE</spring.web>
-
-		<spring.el>3.0.0</spring.el>
-
-		<spring-data-jpa.v>1.11.3.RELEASE</spring-data-jpa.v>
-
+		
 		<junit>4.11</junit>
 
 		<javax.validator>1.1.0.Final</javax.validator>
@@ -91,32 +84,67 @@
 			<version>6.0</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
 		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<version>${spring-data-jpa.v}</version>
+		    <groupId>org.antlr</groupId>
+		    <artifactId>antlr4-runtime</artifactId>
+		    <version>4.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.fracpete/ptstemmer -->
+		<dependency>
+		    <groupId>com.github.fracpete</groupId>
+		    <artifactId>ptstemmer</artifactId>
+		    <version>2010.1.13</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+		<dependency>
+		    <groupId>org.apache.pdfbox</groupId>
+		    <artifactId>pdfbox</artifactId>
+		    <version>1.8.2</version>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${spring.web}</version>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.0-FINAL</version>
 		</dependency>
-
+						
+		<!-- https://mvnrepository.com/artifact/org.annolab.tt4j/org.annolab.tt4j -->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.web}</version>
+		    <groupId>org.annolab.tt4j</groupId>
+		    <artifactId>org.annolab.tt4j</artifactId>
+		    <version>1.2.0</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		
+		<!-- https://mvnrepository.com/artifact/org.antlr/antlrworks -->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${spring.web}</version>
+		    <groupId>org.antlr</groupId>
+		    <artifactId>antlrworks</artifactId>
+		    <version>1.5.2</version>
 		</dependency>
+				
+										
+	
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.41</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+    		<groupId>commons-logging</groupId>
+    		<artifactId>commons-logging</artifactId>
+    		<version>1.1.1</version>
+		</dependency>
+		
+		<dependency>  
+    		<groupId>org.primefaces.extensions</groupId>  
+    		<artifactId>all-themes</artifactId>   
+    		<version>1.0.8</version>  
+		</dependency>  	
 
 		<dependency>
 			<groupId>javax.faces</groupId>
@@ -171,6 +199,7 @@
 			<version>5.0.0.Beta1</version>
 		</dependency>
 	</dependencies>
+		
 	
 	<build>
 		<finalName>${project.artifactId}</finalName>
@@ -183,7 +212,21 @@
 					<target>${maven.compiler.java.target}</target>
 				</configuration>
 			</plugin>
-		</plugins>
+			<plugin>
+	        <groupId>org.antlr</groupId>
+	        <artifactId>antlr4-maven-plugin</artifactId>
+	        <version>4.3</version>
+	        <executions>
+	          <execution>
+	            <id>antlr</id>
+	            <goals>
+	              <goal>antlr4</goal>
+	            </goals>
+	          </execution>
+	        </executions>
+	      </plugin>
+		</plugins>	
+		
 	</build>
 	
 </project>

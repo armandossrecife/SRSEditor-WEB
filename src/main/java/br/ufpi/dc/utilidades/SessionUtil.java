@@ -7,6 +7,11 @@ import javax.servlet.http.HttpSession;
 
 public class SessionUtil implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public static HttpSession getSession(){
 		FacesContext ctx = FacesContext.getCurrentInstance();
 		HttpSession sessao = (HttpSession) ctx.getExternalContext().getSession(false);
